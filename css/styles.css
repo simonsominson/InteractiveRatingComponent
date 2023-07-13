@@ -5,7 +5,7 @@
     --clr-mediumgrey: hsl(216, 12%, 54%);
     --clr-darkblue: hsl(213, 19%, 18%);
     --clr-ultradarkblue: hsl(216, 12%, 8%);
-    --font-sizet: 1rem;
+    --font-sizet: 1.2rem;
 
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: var(--font-sizet);
     padding-bottom: 10px;
     font-weight: 700;
     text-align: center;
@@ -52,10 +52,10 @@ li {
 
 .btn {
     font-size: var(--font-sizet);
-    font-weight: 700;
+    font-weight: 600;
     background-color: var(--clr-lightgrey);
     border-radius: 50%;
-    padding: 10px;
+    padding: .5rem;
     cursor: pointer;
     border: 0;
     color: var(--clr-white);
@@ -63,9 +63,10 @@ li {
 
 .btn:focus {
     background-color: var(--clr-orange);
+    transition: 1s;
 }
 .btn:hover {
-    font-size: 1.1rem;
+    font-weight: 850;
 }
 
 .active {
@@ -98,7 +99,7 @@ li {
 
 
 h2 {
-    font-size: 1.5rem;
+    font-size: var(--font-sizet);
     padding-bottom: 10px;
     font-weight: 700;
     text-align: center;
@@ -135,8 +136,8 @@ h2 {
         flex-direction: column;
     }
     .texto {
-        font-size: (10px, 12vmax, 24px);
-        font-weight: 500;
+        font-size: .7rem;
+        font-weight: bolder;
         color: var(--clr-lightgrey);
         text-align: center;
         padding-bottom: 1.5rem;
@@ -149,40 +150,7 @@ h2 {
         font-size: 1.5rem;
     }
 }
-@media (max-width: 860px) {
-    .card {
-        width: 40%;
-        background-color: var(--clr-darkblue);
-        color: white;
-        padding: 1rem;
-        margin: 20px;
-        border-radius: .8rem;
-        margin: 10% auto;
-        margin-block: 20%;
-        display: flex;
-        flex-direction: column;
-    }
-    .texto {
-        font-size: (10px, 12vmax, 24px);
-        font-weight: 600;
-        color: var(--clr-lightgrey);
-        text-align: center;
-        padding-bottom: 1.5rem;
-    }
-    .attribution {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 0;
-        font-weight: 600;
-        font-size: var(--font-sizet);
-    }
-    
-
-    
-}
-@media (max-width: 375px) {
+@media (max-width: 875px) {
     .card {
         width: 70%;
         background-color: var(--clr-darkblue);
@@ -196,10 +164,10 @@ h2 {
         flex-direction: column;
     }
     .texto {
-        font-size: (10px, 12vmax, 24px);
-        font-weight: 600;
+        font-size: .7rem;
+        font-weight: bolder;
         color: var(--clr-lightgrey);
-        text-align: justify;
+        text-align: center;
         padding-bottom: 1.5rem;
     }
     .attribution {
@@ -211,7 +179,44 @@ h2 {
         font-weight: 600;
         font-size: var(--font-sizet);
     }
+    .btn {
+        font-size: 1rem;
+    }
+
     
+}
+@media (max-width: 320px) {
+    .card {
+        width: 90%;
+        background-color: var(--clr-darkblue);
+        color: white;
+        padding: 1rem;
+        margin: 20px;
+        border-radius: .8rem;
+        margin: 10% auto;
+        margin-block: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+    .texto {
+        font-size: .7rem;
+        font-weight: bolder;
+        color: var(--clr-lightgrey);
+        text-align: center;
+        padding-bottom: 1.5rem;
+    }
+    .attribution {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        font-weight: 600;
+        font-size: .7rem;
+    }
+    .btn {
+        font-size: .6rem;
+    }
 
     
 }
